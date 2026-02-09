@@ -32,19 +32,17 @@ These insights empower stakeholders with key business metrics for strategic deci
 
 ```text
 sql-data-warehouse-project/
-├── datasets/               # Raw CSV files (ERP & CRM sources)
-├── scripts/                # SQL scripts for ETL processes
-│   ├── init_database.sql   # DDL: Schemas and Tables creation
-│   └── insert_bronze.psql  # DML: Bulk loading data into Bronze layer
-├── README.md               # Project documentation
-└── LICENSE                 # MIT License
+├── datasets/                              # Raw CSV files (ERP & CRM sources)
+├── scripts/                               # SQL scripts for ETL processes
+│   ├── 01_init_database.sql               # Database Initialization (Drop & Re-create)
+|   ├── 02_init_database.sql               # Schema Initialization
+|   └── bronze/                            # Bronze Layer (Medallion Architecture)
+│       ├── ddl_bronze.sql                 # DDL Script: Create Bronze Tables
+│       ├── load_bronze.sql                # Bronze Layer Data Loading Script
+│       └── proc_load_bronze_setup.sql     # DML: Bulk loading data into Bronze layer
+├── README.md                              # Project documentation
+└── LICENSE                                # MIT License
 ```
----
-
-## 🚀 How to Run
-
-### Step 1: Databae Initialization
-
 ---
 
 ## License

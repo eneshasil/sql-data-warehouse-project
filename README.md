@@ -40,6 +40,12 @@ sql-data-warehouse-project/
 │       ├── ddl_bronze.sql                 # DDL Script: Create Bronze Tables
 │       ├── load_bronze.sql                # Bronze Layer Data Loading Script
 │       └── proc_load_bronze_setup.sql     # DML: Bulk loading data into Bronze layer
+|   └── silver/                            # Silver Layer
+│       ├── ddl_silver.sql                 # DDL Script: Create Silver Tables
+│       ├── worker_proc_silver.sql         # Defines the transformation and loading logic for each Silver table
+│       └── orchestrator_proc_silver.sql   # This master stored procedure orchestrates the loading of the Silver layer.
+├── tests/                                 # SQL scripts for Data Quality and validation checks.
+|   └── quality_checks_silver.sql          # Performs data quality checks on the Silver layer.
 ├── README.md                              # Project documentation
 └── LICENSE                                # MIT License
 ```

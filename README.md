@@ -48,8 +48,8 @@ sql-data-warehouse-project/
 │   │   └── proc_load_bronze.sql# Stored Procedures for loading Bronze
 │   ├── silver/                 # Silver Layer Transformation
 │   │   ├── ddl_silver.sql      # Create Silver tables
-│   │   ├── proc_silver_workers.sql # Transformation logic per table
-│   │   └── proc_silver_load.sql    # Master Orchestrator (Logging & Error Handling)
+│   │   ├── worker_proc_silver.sql # Transformation logic per table
+│   │   └── orchestrator_proc_silver.sql    # Master Orchestrator (Logging & Error Handling)
 │   └── gold/                   # Gold Layer Modeling
 │       └── ddl_gold.sql        # Views for Dimensions and Facts (Star Schema)
 ├── tests/                      # Data Quality (DQ) & Validation
